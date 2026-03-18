@@ -22,3 +22,15 @@ This portfolio documents my progress through a Python programming course designe
 3) Functions and modular code
 4) Data structures (lists, dictionaries, tuples and sets)
 5) Validation and error handling
+6) File handling
+7) Object-Orientated Programming (OOP)
+8) Version control with Git and GitHub
+9) Working with Jupyter Notebooks
+
+---
+
+## Portfolio Projects
+
+|#| Project | Key Skills | Status |
+|---|---|---|---|
+|1| [Unit Converter](#) | Variables, functions and input/output | ✅ Complete |
