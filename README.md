@@ -37,7 +37,6 @@ This portfolio documents my progress through a Python programming course designe
 |2| [Number Guessing Game](#) | Loops, conditionals and random | ✅ Complete |
 |3| [To-Do List](#) | Lists, functions and data structures | ✅ Complete |
 |4| [Student Grade Calculator](#) | Dictionaries, validation and error handling | ✅ Complete |
-
 |5| [OOP Bank Account](#) | Classes and OOP principles | ✅ Complete |
 |6| [Data Analysis Notebook](#) | Jupyter Notebook and data exploration | ✅ Complete |
 
