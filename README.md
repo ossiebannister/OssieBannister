@@ -55,3 +55,9 @@ This portfolio documents my progress through a Python programming course designe
 3) Git version control
 4) GitHub for code sharing and portfolio management
 5) Markdown for documentation
+
+## Contact
+
+**GitHub:** OssieBannister
+**Email:** 26bannio@bscmail.org
+
