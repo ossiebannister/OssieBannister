@@ -151,7 +151,7 @@ def play_game():
             print("Too high! Try again.")
         else:
             print(f"Correct! You got it in {attempts} attempts.")
-            break  # Exit the loop
+            break
 
 play_game()
 
