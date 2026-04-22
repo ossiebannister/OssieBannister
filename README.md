@@ -63,7 +63,69 @@ This portfolio documents my progress through a Python programming course designe
 
 # Python projects 
 
-unitconverter.png
+def km_to_miles(km):
+    """Convert kilometres to miles."""
+    miles = km * 0.621371
+    return miles
+
+def miles_to_km(miles):
+    """Convert miles to kilometres."""
+    km = miles / 0.621371
+    return km
+
+def c_to_f(c):
+    """Convert Celsius to Fahrenheit."""
+    return (c * 9/5) + 32
+
+def f_to_c(f):
+    """Convert Fahrenheit to Celsius."""
+    return (f - 32) * 5/9
+
+
+def show_menu():
+    print("=== Unit Converter ===")
+    print("1. Kilometres to Miles")
+    print("2. Miles to Kilometres")
+    print("3. Celsius to Fahrenheit")
+    print("4. Fahrenheit to Celsius")
+    print("5. Exit")
+
+
+def main():
+    while True:
+        show_menu()
+        choice = input("Enter your choice (1-5): ")
+
+        if choice == "1":
+            km = float(input("Enter kilometres: "))
+            result = km_to_miles(km)
+            print(f"{km} km = {result:.2f} miles\n")
+
+        elif choice == "2":
+            miles = float(input("Enter miles: "))
+            result = miles_to_km(miles)
+            print(f"{miles} miles = {result:.2f} km\n")
+
+        elif choice == "3":
+            c = float(input("Enter Celsius: "))
+            result = c_to_f(c)
+            print(f"{c}°C = {result:.2f}°F\n")
+
+        elif choice == "4":
+            f = float(input("Enter Fahrenheit: "))
+            result = f_to_c(f)
+            print(f"{f}°F = {result:.2f}°C\n")
+
+        elif choice == "5":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid choice. Please enter 1–5.\n")
+
+
+main()
+
 
 
 
