@@ -257,3 +257,134 @@ def calculate_results():
 
 calculate_results()
 ```
+
+### OOP Bank Account
+```python
+class BankAccount:
+    """A simple bank account class."""
+    
+    def __init__(self, owner, initial_balance=0):
+        """Set up the account with an owner name and starting balance."""
+        self.owner = owner
+        self.balance = initial_balance
+        self.transactions = []
+    
+    def deposit(self, amount):
+        """Add money to the account."""
+        if amount > 0:
+            self.balance += amount
+            self.transactions.append(f"Deposit: +£{amount:.2f}")
+            print(f"Deposited £{amount:.2f}. New balance: £{self.balance:.2f}")
+        else:
+            print("Deposit amount must be positive.")
+    
+    def withdraw(self, amount):
+        """Remove money from the account if funds are available."""
+        if amount <= 0:
+            print("Withdrawal amount must be positive.")
+        elif amount > self.balance:
+            print(f"Insufficient funds. Balance is only £{self.balance:.2f}")
+        else:
+            self.balance -= amount
+            self.transactions.append(f"Withdrawal: -£{amount:.2f}")
+            print(f"Withdrew £{amount:.2f}. New balance: £{self.balance:.2f}")
+    
+    def show_balance(self):
+        """Display the current balance."""
+        print(f"\nAccount holder: {self.owner}")
+        print(f"Current balance: £{self.balance:.2f}")
+    
+    def show_history(self):
+        """Display all transactions."""
+        print(f"\n=== Transaction History for {self.owner} ===")
+        for t in self.transactions:
+            print(f"  {t}")
+        print(f"  Current balance: £{self.balance:.2f}")
+def main():
+    name = input("Enter account holder name: ")
+    opening = float(input("Enter opening balance: £"))
+    
+    account = BankAccount(name, opening)
+    
+    while True:
+        print("\n1. Deposit")
+        print("2. Withdraw")
+        print("3. Check balance")
+        print("4. View history")
+        print("5. Exit")
+        
+        choice = input("Choose: ")
+        
+        if choice == "1":
+            amount = float(input("Amount to deposit: £"))
+            account.deposit(amount)
+        elif choice == "2":
+            amount = float(input("Amount to withdraw: £"))
+            account.withdraw(amount)
+        elif choice == "3":
+            account.show_balance()
+        elif choice == "4":
+            account.show_history()
+        elif choice == "5":
+            print("Thank you for banking with us.")
+            break
+
+main()
+
+```
+### DataBase
+
+### Contact Book with File Saving
+```python
+import os
+
+FILENAME = "contacts.txt"
+
+def load_contacts():
+    """Load contacts from file. Return empty list if file doesn't exist."""
+    contacts = []
+    if os.path.exists(FILENAME):
+        with open(FILENAME, "r") as f:
+            for line in f:
+                parts = line.strip().split(",")
+                if len(parts) == 2:
+                    contacts.append({"name": parts[0], "phone": parts[1]})
+    return contacts
+
+def save_contacts(contacts):
+    """Save all contacts to file."""
+    with open(FILENAME, "w") as f:
+        for c in contacts:
+            f.write(f"{c['name']},{c['phone']}\n")
+    print("Contacts saved.")
+
+def add_contact(contacts):
+    name = input("Name: ")
+    phone = input("Phone: ")
+    contacts.append({"name": name, "phone": phone})
+    save_contacts(contacts)
+
+def view_contacts(contacts):
+    if not contacts:
+        print("No contacts saved.")
+        return
+    print("\n=== Contacts ===")
+    for i, c in enumerate(contacts, 1):
+        print(f"{i}. {c['name']} — {c['phone']}")
+
+def main():
+    contacts = load_contacts()
+    print(f"Loaded {len(contacts)} contact(s).")
+    
+    while True:
+        print("\n1. View contacts  2. Add contact  3. Exit")
+        choice = input("Choose: ")
+        if choice == "1":
+            view_contacts(contacts)
+        elif choice == "2":
+            add_contact(contacts)
+        elif choice == "3":
+            break
+
+main()
+```
