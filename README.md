@@ -333,6 +333,107 @@ main()
 
 ```
 ### DataBase
+```python
+import sqlite3
+
+def dbConnection():
+    conn = sqlite3.connect('Shoppinglist.db')
+    cursor = conn.cursor()
+
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS shopping_list (
+            item_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            item_name TEXT NOT NULL,
+            quantity INTEGER NOT NULL DEFAULT 1,
+            category TEXT,
+            purchased INTEGER DEFAULT 0
+        )
+    ''')
+
+    return conn, cursor
+
+
+def insertData():
+    """Add fixed data to the database"""
+    query = '''INSERT INTO shopping_list (item_name, quantity, category, purchased)
+               VALUES ("shoes", 1, "foot wear", 1);'''
+    conn, cursor = dbConnection()
+    cursor.execute(query)
+    conn.commit()
+    conn.close()
+
+
+def insertDataWithParameters():
+    """Add user‑entered data to the database"""
+    query = '''INSERT INTO shopping_list (item_name, quantity, category, purchased)
+               VALUES (?, ?, ?, ?);'''
+
+    item_name = input('Enter the item name: ')
+    quantity = int(input('Enter a quantity: '))
+    category = input("What category is the item? ")
+    purchased = int(input('Purchased? [0 = No, 1 = Yes]: '))
+
+    conn, cursor = dbConnection()
+    cursor.execute(query, (item_name, quantity, category, purchased))
+    conn.commit()
+    conn.close()
+
+    print("Record was successfully saved.")
+
+
+def readDatabase():
+    """Read and display all items"""
+    query = "SELECT * FROM shopping_list"
+    conn, cursor = dbConnection()
+    cursor.execute(query)
+    results = cursor.fetchall()
+
+    print("Item Name | Quantity | Category | Purchased")
+    print("-------------------------------------------")
+
+    for row in results:
+        print(row[1], row[2], row[3], row[4])
+
+    conn.close()
+
+
+def removeItem():
+    print("Remove item feature not implemented yet.")
+
+
+def updateItem():
+    print("Update item feature not implemented yet.")
+
+
+def menu():
+    print("Shopping List Manager")
+    print("---------------------")
+    print("1. Add item")
+    print("2. Show items")
+    print("3. Remove item")
+    print("4. Update item")
+    print("5. Quit")
+
+
+def main():
+    while True:
+        menu()
+        choice = int(input("Choose an option: "))
+
+        if choice == 1:
+            insertDataWithParameters()
+        elif choice == 2:
+            readDatabase()
+        elif choice == 3:
+            removeItem()
+        elif choice == 4:
+            updateItem()
+        elif choice == 5:
+            print("----- End of Program -----")
+            break
+        else:
+            print("Invalid option. Try again.")
+```
 
 ### Contact Book with File Saving
 ```python
@@ -387,4 +488,4 @@ def main():
             break
 
 main()
-```
+
