@@ -64,6 +64,13 @@ This portfolio documents my progress through a Python programming course designe
 # Python projects 
 
 ## Unit Converter
+### What it should do:
+A program that converts between common units. At minimum:
+
+Kilometres ↔ Miles
+Celsius ↔ Fahrenheit
+Kilograms ↔ Pounds
+
 ```python
 def km_to_miles(km):
     """Convert kilometres to miles."""
