@@ -282,6 +282,9 @@ def calculate_results():
 calculate_results()
 ```
 
+### What response does this code give?
+![alt text]({7F0139F9-E003-4737-AE56-92BDE8430595}.png)
+
 ## OOP Bank Account
 ### What it should do
 A simple bank account simulation using a class. The user can deposit money, withdraw money (with a check for sufficient funds), and check their balance.
@@ -359,6 +362,9 @@ def main():
 main()
 
 ```
+
+### What response does this code give?
+![alt text]({A3DE8E0C-038A-414A-8A39-355FC285E718}.png)
 ### DataBase
 ```python
 import sqlite3
