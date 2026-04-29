@@ -169,6 +169,8 @@ def play_game():
 play_game()
 
 ```
+### What response does this code give?
+![alt text]({91416653-DBD0-4258-82C9-6D1B712006AB}.png)
 
 ## To-Do List Manager
 ### What it should do
@@ -225,6 +227,10 @@ def main():
 
 main()
 ```
+
+### What response should this code give?
+![alt text]({1391B77F-4495-493B-B3A4-9E952108E715}.png)
+
 ## Student Grade Calculator
 ### What it should do
 The user enters a student's name and their scores for several subjects. The program calculates the average and assigns a grade (A, B, C, D, U). It handles invalid input gracefully.
