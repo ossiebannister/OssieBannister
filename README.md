@@ -365,7 +365,11 @@ main()
 
 ### What response does this code give?
 ![alt text]({A3DE8E0C-038A-414A-8A39-355FC285E718}.png)
-### DataBase
+
+## DataBase
+### What it should do
+A simple shopping list creator that allows the user to add and delete items when they are bought.
+
 ```python
 import sqlite3
 
@@ -471,7 +475,10 @@ def main():
 ### What response does the code give?
 ![alt text]({CEA8C4D3-F2C7-425F-80F6-580AB070AC8D}.png)
 
-### Contact Book with File Saving
+## Contact Book with File Saving
+### What it should do
+A program that stores student names and scores in an SQLite database. Users can add records, view all records, and search by name.
+
 ```python
 import os
 
