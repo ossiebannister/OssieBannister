@@ -468,6 +468,9 @@ def main():
             print("Invalid option. Try again.")
 ```
 
+### What response does the code give?
+![alt text]({CEA8C4D3-F2C7-425F-80F6-580AB070AC8D}.png)
+
 ### Contact Book with File Saving
 ```python
 import os
