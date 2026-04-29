@@ -69,7 +69,7 @@ A program that converts between common units. At minimum:
 
 Kilometres ↔ Miles |
 Celsius ↔ Fahrenheit |
-Kilograms ↔ Pounds |
+Kilograms ↔ Pounds 
 
 ```python
 def km_to_miles(km):
@@ -137,7 +137,13 @@ main()
 
 ```
 
-### Number Quessing Game
+### What response does this code give?
+![alt text]({9F1252BD-B974-44C8-85A2-6F72FDE5CE52}.png)
+
+## Number Guessing Game
+### What it should do
+The computer picks a random number. The player guesses until they get it right. The program tells them if their guess is too high or too low. It counts the number of guesses.
+
 ```python
 import random
 
@@ -164,7 +170,10 @@ play_game()
 
 ```
 
-### To-Do List Manager
+## To-Do List Manager
+### What it should do
+A simple to-do list where the user can add tasks, view all tasks, mark a task as done, and remove tasks.
+
 ```python
 def show_tasks(tasks):
     """Display all tasks with their numbers."""
@@ -216,7 +225,9 @@ def main():
 
 main()
 ```
-### Student Grade Calculator
+## Student Grade Calculator
+### What it should do
+The user enters a student's name and their scores for several subjects. The program calculates the average and assigns a grade (A, B, C, D, U). It handles invalid input gracefully.
 
 ```python
 def get_grade(average):
@@ -265,7 +276,10 @@ def calculate_results():
 calculate_results()
 ```
 
-### OOP Bank Account
+## OOP Bank Account
+### What it should do
+A simple bank account simulation using a class. The user can deposit money, withdraw money (with a check for sufficient funds), and check their balance.
+
 ```python
 class BankAccount:
     """A simple bank account class."""
