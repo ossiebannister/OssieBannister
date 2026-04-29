@@ -524,4 +524,7 @@ def main():
             break
 
 main()
+```
 
+### What response does the code give?
+![alt text]({EF746E16-508E-4C34-BC92-6BC9FF77FAF8}.png)
