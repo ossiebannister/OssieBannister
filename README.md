@@ -33,12 +33,13 @@ This portfolio documents my progress through a Python programming course designe
 
 |#| Project | Key Skills | Status |
 |---|---|---|---|
-|1| [Unit Converter](#) | Variables, functions and input/output | ✅ Complete |
-|2| [Number Guessing Game](#) | Loops, conditionals and random | ✅ Complete |
-|3| [To-Do List](#) | Lists, functions and data structures | ✅ Complete |
-|4| [Student Grade Calculator](#) | Dictionaries, validation and error handling | ✅ Complete |
-|5| [OOP Bank Account](#) | Classes and OOP principles | ✅ Complete |
-|6| [Data Analysis Notebook](#) | Jupyter Notebook and data exploration | ✅ Complete |
+|1| [Unit Converter](#Unit-Converter) | Variables, functions and input/output | ✅ Complete |
+|2| [Number Guessing Game](#Number-Guessing-Game) | Loops, conditionals and random | ✅ Complete |
+|3| [To-Do List](#To-Do-List-Manager) | Lists, functions and data structures | ✅ Complete |
+|4| [Student Grade Calculator](#Student-Grade-Calculator) | Dictionaries, validation and error handling | ✅ Complete |
+|5| [OOP Bank Account](#OOP-Bank-Account) | Classes and OOP principles | ✅ Complete |
+|6| [Data Base](#DataBase) | Shopping list creator | ✅ Complete | 
+|7| [Contact Book](#Contact-Book-with-File-Saving) | Jupyter Notebook and data exploration | ✅ Complete |
 
 ---
 
