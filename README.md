@@ -436,11 +436,100 @@ def readDatabase():
 
 
 def removeItem():
-    print("Remove item feature not implemented yet.")
+    print("\nRemove Item")
+    print("-----------")
+    print("1. Remove by ID")
+    print("2. Remove by Name")
+
+    choice = input("Choose an option: ")
+
+    conn, cursor = dbConnection()
+
+    if choice == "1":
+        item_id = input("Enter the item ID to remove: ")
+        cursor.execute("DELETE FROM shopping_list WHERE item_id = ?", (item_id,))
+        conn.commit()
+        print("Item removed (if ID existed).")
+
+    elif choice == "2":
+        name = input("Enter the item name to remove: ")
+        cursor.execute("DELETE FROM shopping_list WHERE item_name = ?", (name,))
+        conn.commit()
+        print("Item removed (if name existed).")
+
+    else:
+        print("Invalid option.")
+
+    cursor.close()
+    conn.close()
 
 
 def updateItem():
-    print("Update item feature not implemented yet.")
+    print("\nUpdate Item")
+    print("-----------")
+    print("1. Update by ID")
+    print("2. Update by Name")
+
+    choice = input("Choose an option: ")
+
+    conn, cursor = dbConnection()
+
+    if choice == "1":
+        identifier = input("Enter the item ID: ")
+        cursor.execute("SELECT * FROM shopping_list WHERE item_id = ?", (identifier,))
+    elif choice == "2":
+        identifier = input("Enter the item name: ")
+        cursor.execute("SELECT * FROM shopping_list WHERE item_name = ?", (identifier,))
+    else:
+        print("Invalid option.")
+        return
+
+    item = cursor.fetchone()
+
+    if not item:
+        print("Item not found.")
+        cursor.close()
+        conn.close()
+        return
+
+    print("\nCurrent values:")
+    print(f"Name: {item[1]}")
+    print(f"Quantity: {item[2]}")
+    print(f"Category: {item[3]}")
+    print(f"Purchased: {'Yes' if item[4] == 1 else 'No'}")
+
+    # Ask what to update
+    print("\nWhat would you like to update?")
+    print("1. Quantity")
+    print("2. Category")
+    print("3. Purchased status")
+
+    update_choice = input("Choose an option: ")
+
+    if update_choice == "1":
+        new_quantity = int(input("Enter new quantity: "))
+        cursor.execute("UPDATE shopping_list SET quantity = ? WHERE item_id = ?", (new_quantity, item[0]))
+
+    elif update_choice == "2":
+        new_category = input("Enter new category: ")
+        cursor.execute("UPDATE shopping_list SET category = ? WHERE item_id = ?", (new_category, item[0]))
+
+    elif update_choice == "3":
+        new_status = int(input("Purchased? [0 = No, 1 = Yes]: "))
+        cursor.execute("UPDATE shopping_list SET purchased = ? WHERE item_id = ?", (new_status, item[0]))
+
+    else:
+        print("Invalid option.")
+        cursor.close()
+        conn.close()
+        return
+
+    conn.commit()
+    cursor.close()
+    conn.close()
+
+    print("Item updated successfully.")
+
 
 
 def menu():
