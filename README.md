@@ -173,6 +173,9 @@ def play_game():
 play_game()
 
 ```
+
+[Home](#Home)
+
 ### What response does this code give?
 ![alt text]({91416653-DBD0-4258-82C9-6D1B712006AB}.png)
 
@@ -232,6 +235,8 @@ def main():
 main()
 ```
 
+[Home](#Home)
+
 ### What response should this code give?
 ![alt text]({1391B77F-4495-493B-B3A4-9E952108E715}.png)
 
@@ -285,6 +290,8 @@ def calculate_results():
 
 calculate_results()
 ```
+
+[Home](#Home)
 
 ### What response does this code give?
 ![alt text]({7F0139F9-E003-4737-AE56-92BDE8430595}.png)
@@ -366,6 +373,8 @@ def main():
 main()
 
 ```
+
+[Home](#Home)
 
 ### What response does this code give?
 ![alt text]({A3DE8E0C-038A-414A-8A39-355FC285E718}.png)
@@ -565,6 +574,8 @@ def main():
             print("Invalid option. Try again.")
 ```
 
+[Home](#Home)
+
 ### What response does the code give?
 ![alt text]({CEA8C4D3-F2C7-425F-80F6-580AB070AC8D}.png)
 
@@ -625,6 +636,8 @@ def main():
 
 main()
 ```
+
+[Home](#Home)
 
 ### What response does the code give?
 ![alt text]({EF746E16-508E-4C34-BC92-6BC9FF77FAF8}.png)
