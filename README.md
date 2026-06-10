@@ -30,6 +30,7 @@ This portfolio documents my progress through a Python programming course designe
 ---
 
 ## Portfolio Projects
+## Home
 
 |#| Project | Key Skills | Status |
 |---|---|---|---|
@@ -137,6 +138,8 @@ def main():
 main()
 
 ```
+
+[Home](#Home)
 
 ### What response does this code give?
 ![alt text]({9F1252BD-B974-44C8-85A2-6F72FDE5CE52}.png)
